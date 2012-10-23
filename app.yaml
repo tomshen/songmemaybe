@@ -1,0 +1,23 @@
+application: songmemaybe
+version: 8
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /images
+  static_dir: images
+- url: /scripts
+  static_dir: scripts
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: jinja2
+  version: 2.6

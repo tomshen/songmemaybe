@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Song Me Maybe!</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<!--link rel="stylesheet" type="text/css" href="borrar.css"/-->
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+	<!--link rel="stylesheet" href="../s/sample.css" type="text/css" media="screen" charset="utf-8" /-->
+	<link href='http://fonts.googleapis.com/css?family=Orienta|Quicksand:700' rel='stylesheet' type='text/css'>
+	<script src="scripts/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">	
+	function changeClass(){
+		if(document.getElementById("block").className == "block"){
+			//document.getElementById("block").className += " rotated";
+			//$("#goButton").delay(750).fadeOut(1);
+		}
+		else{
+			document.getElementById("block").className = "block";
+			$("#goButton").delay(1500).fadeIn('slow');
+		}
+	}
+	</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35177592-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body class="simple">
+	<div id="container">
+		<div id="block" class="block rotated" onclick="changeClass()">
+			
+			<div class="back side">
+				<h3>Song Me Maybe<br/><strong>Share Music With Your Friends!</strong></h3>
+				<div id="returnAddress">
+					<p>From: You!</p>
+				</div>
+				<div id="address">
+					<p>To: Anyone you want! </br> Just click on the envelope to get started.</p>
+				</div>
+			</div>
+			<div class="front side">
+				<a href="/start"><img src="images/goButton.png" id="goButton" style="display:none" height="150px" width="150px" alt="""/></a>
+				<img src="images/envelopeClosed.png" height="700px" width="900px" alt="" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body{
+
+background-image:url("../images/bg.png");
+}
+
+#goButton{
+	position:absolute;
+	margin:0;
+	left:375px;
+	top:360px;
+}
+
+
+#container{
+	height: 700px;
+	width: 900px;
+	position: relative;
+	margin: 20px auto 0 auto;
+	font: 14px Arial, sans-serif;
+	text-shadow: 0 1px 0 #000;
+	line-height: 1.3em;
+	
+	-webkit-perspective: 500;
+}
+
+h3{
+	font-size:55px;
+	color: #000;
+	text-align:center;
+	line-height:1em;
+	margin:0;
+}
+p{
+	margin-bottom: 10px;
+	font-family: "Orienta", "Verdana", "Arial", sans-serif;
+	font-weight:400;
+}
+
+h3{
+	 font-family: "Quicksand", "Arial", sans-serif;
+	 font-weight: 700;
+}
+.simple h3, .simple p{
+	padding: 15;
+}
+.block {
+	position: absolute;
+	height: 700px;
+	width: 900px;
+	left: 0px;
+	top: 0px;
+	
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1.5s;
+}
+
+.rotated{
+	-webkit-transform: rotateY(180deg);
+}
+
+.side{
+	position: absolute;	
+	
+	-webkit-backface-visibility: hidden;
+}
+
+.front{
+	
+	color: #fff;
+	height: 700px;
+	width: 900px;
+
+	
+}
+.front img{ }
+.back{
+	
+	background-image: url('../images/envelopeBack.png');
+	background-size: 900px 700px;
+	height: 700px;
+	width: 900px;
+	
+	-webkit-transform: rotateY(180deg);
+}
+
+#returnAddress{
+	height:75px;
+	width:270px;
+	position:absolute;
+	left:110px;
+	top:315px;
+	font-size:1.75em;
+	}
+	
+	
+
+#address{
+
+	height 75px;
+	width 150px;
+	position:absolute;
+	text-align:center;
+	left:175px;
+	top:400px;
+	font-size:2em;
+	line-height:1.5em;
+	
+}
+	

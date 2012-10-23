@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<title>Song Me Maybe! from {{sender}}</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/displayStyle.css"/>
+	<script src="scripts/jquery-1.8.2.min.js"></script>
+	<script src="scripts/jquery.autosize.js"></script>
+	<script>
+		$(document).ready(function() {
+		$('textarea').autosize();
+		});	
+	</script>
+	<script>
+		function changeClass(){
+			if(document.getElementById("block").className == "block")
+				document.getElementById("block").className += " rotated";
+			else
+				document.getElementById("block").className = "block";
+		}
+		$(document).ready(function(){
+		$("#open").click(function() {
+			$("#containAll").animate({margin: "0 0 0 0"}, {queue:false, duration: "slow"});
+			$("#container").stop(false, false).slideToggle("slow", function(){});
+			$("#open").fadeOut("slow");
+			$("#envClosed").fadeOut("slow");
+			$("#envOpen").fadeIn("slow");
+			$("#songThemBack").fadeIn("slow");
+			$("#player").show();
+		});
+		});
+	</script>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-35177592-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+
+<body>
+		<div id="header">
+			<img src="images/header.png" height="100px" width="800px">
+		</div>
+		<div id = "containAll">
+			<div id="container" style="display:none">
+				<h1>You were sent a song </br> with Song Me Maybe!</h1>
+				<form action="/search" method="post">
+				<fieldset>
+					<label for="name">From:</label>
+					<input type="text" id="name" name="sender"  value="{{sender}}" readonly="readonly"/>
+					
+					<label for="receiver">To: </label>
+					<input type="text" id="email" name="recipient" value="{{recipient}}" readonly="readonly"/>
+					
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" readonly="readonly">{{message}}</textarea>
+					
+				</fieldset>
+				</form>
+				
+				
+			<object id="player" style="display:none"  width="250" height="40"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=cowbell.grooveshark.com&songIDs={{songID}}&style=metal&p=0" /><embed src="http://grooveshark.com/songWidget.swf" type="application/x-shockwave-flash" width="250" height="40" flashvars="hostname=cowbell.grooveshark.com&songIDs={{songID}}&style=metal&p=0" allowScriptAccess="always" wmode="window" /></object>
+			
+				
+			</div>
+			
+			<div id="letterCont">
+				<div id="envClosed">
+					<img id='clickme' src="images/envelopeClosed.png" height="700px" width="800px"/>
+				</div>
+				<div id="envOpen" style="display:none">
+					<img id="envOpen" src="images/envelopeOpen.png" height="700px" width="800px"/>
+				</div>
+				
+				
+			</div>
+			<div id = "buttons"><input type="image" src="images/openButton.png" alt="Submit" id="open" value="Send Song!" />
+					<form name = "songBackButton" action="/start" method="get" >
+						<input type="image" src="images/songBackButton.png" alt="songBack" value="Song them back!" id="songThemBack" style="display:none"/>
+					</form>
+			</div>
+		
+		</div>	
+
+	
+	
+</body>
