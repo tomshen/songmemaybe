@@ -1,4 +1,4 @@
-Song Me Maybe
+[Song Me Maybe](http://songmemaybe.appspot.com/)
 =============
 Send songs to friends!
 
